@@ -9,6 +9,8 @@ class CartController extends Controller
 {
     public function index()
     {
-        return '<h1>Panier</h1>';
+//      return '<h1>Panier</h1>';
+
+        return view('cart');
     }
 }
