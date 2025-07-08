@@ -1,19 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Accuiel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>Accueil</title>
+    @include('head-links')
 </head>
 <body>
 
 @include('header')
 
-<img src="{{asset('images/replay-homepage.png')}}" alt="Replay la seconde main du jeu" id="logo-homepage">
+<img src="{{asset('images/replay-2.0.png')}}" alt="Replay la seconde main du jeu" id="logo-homepage">
 
 <div class="bg-red" id="avertissment-accueil">
     <p class="font-white font-16 font-roboto font-medium" id="p-avertissment">
@@ -26,13 +23,13 @@
 
 <div id="img-ventes-conteiner">
     <img src="{{asset('images/crack-list-jeu.jpg')}}" class="img-ventes" alt="crack list photo">
-    <img src="{{asset('images/skyjo.webp')}}" class="img-ventes">
-    <img src="{{asset('images/code-names.jpg')}}" class="img-ventes">
-    <img src="{{asset('images/wazabi.webp')}}" class="img-ventes">
+    <img src="{{asset('images/skyjo.webp')}}" class="img-ventes" alt="skyjo jeu photo">
+    <img src="{{asset('images/code-names.jpg')}}" class="img-ventes" alt="code names jeu photo">
+    <img src="{{asset('images/wazabi.webp')}}" class="img-ventes" alt="wazabi jeu photo">
 </div>
 
 <div class="btn-container">
-    <button class="btn-jeux">Voir tous les jeux</button>
+    <button class="btn-primary">Voir tous les jeux</button>
 </div>
 
 <div class="statistic-conteiner">
@@ -52,10 +49,8 @@
 </div>
 
 <div class="btn-container">
-    <button class="btn-jeux">Voir tous les jeux</button>
+    <button class="btn-primary">Voir tous les jeux</button>
 </div>
 
 
 @include('footer')
-</body>
-</html>

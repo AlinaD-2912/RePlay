@@ -18,3 +18,7 @@ Route::get('/inscription', [ConnectionController::class, 'sInscrire']); # sInscr
 
 Route::get('/apropos', [AboutController::class, 'index']);
 Route::get('/vendre', [SaleController::class, 'index']);
+
+Route::get('/livraison', [ConnectionController::class, 'livraison']);
+Route::get('/paiement', [ConnectionController::class, 'paiement']);
+Route::get('/confirmation', [ConnectionController::class, 'confirmation']);
