@@ -13,6 +13,6 @@ class ProductController extends Controller
     }
     public function show($id)
     {
-        return view('product-details', ['id' => $id]);
+        return view('fiche-produit', ['id' => $id]);
     }
 }

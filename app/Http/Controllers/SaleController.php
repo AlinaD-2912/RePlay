@@ -16,6 +16,8 @@ class SaleController extends Controller
     public function estimationPrix(){
         return view('estimation-prix');
     }
-
+    public function bonDeLivraison (){
+        return view('bon-de-livraison');
+    }
 
 }

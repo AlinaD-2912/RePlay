@@ -22,7 +22,7 @@ Route::get('/apropos', [AboutController::class, 'index']);
 Route::get('/fiche-vente', [SaleController::class, 'ficheVente']);
 Route::get('/vendre', [SaleController::class, 'vendre']);
 Route::get('/estimation', [SaleController::class, 'estimationPrix']);
-
+Route::get('/bon-de-livraison', [SaleController::class, 'bonDeLivraison']);
 
 Route::get('/livraison', [ConnectionController::class, 'livraison']);
 Route::get('/paiement', [ConnectionController::class, 'paiement']);

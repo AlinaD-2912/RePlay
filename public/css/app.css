@@ -402,6 +402,65 @@ input::placeholder {
     margin: 0 auto;
 }
 
+/*CATALOGUE*/
+.search-section {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid #9C282A;
+    border-radius: 16px;
+    padding: 8px 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: 10px;
+    flex: 1;
+    background: transparent;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-buttons {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-buttons button {
+    background-color: #9C282A;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #B93A3C;
+}
+
+
 @media (min-width: 844px) {
     .nav-links {
         gap: 90px;
