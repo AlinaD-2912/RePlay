@@ -1,14 +1,10 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Se connecter</title>
-    @include('head-links')
-</head>
-<body>
-@include('header')
-<main>
+@extends('layouts.app')
+
+@section('title', 'Catalogue')
+
+@section('content')
+
+
 <h1 class="font-audiowide text-center text-to-upper">Se connecter</h1>
 
 <div class="div-center">
@@ -34,6 +30,5 @@
         <a href="/inscription" class="font-medium font-dark-red">Inscrivez-vous</a>
     </p>
 </div>
-</main>
 
-@include('footer')
+@endsection

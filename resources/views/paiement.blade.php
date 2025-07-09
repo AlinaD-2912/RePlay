@@ -1,15 +1,9 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paiement</title>
-    @include('head-links')
-</head>
-<body>
-@include('header')
+@extends('layouts.app')
 
-<main>
+@section('title', 'Catalogue')
+
+@section('content')
+
 <div class="div-points-relais">
     <h1 class="font-audiowide text-center text-to-upper">Paiement</h1>
     <form >
@@ -32,7 +26,4 @@
     </div>
 </div>
 
-
-</main>
-
-@include('footer')
+@endsection

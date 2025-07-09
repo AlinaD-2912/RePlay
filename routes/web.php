@@ -9,8 +9,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/catalogue', [ProductController::class, 'index']);
-Route::get('/produit/{id}', [ProductController::class, 'show']);
+
+Route::get('/catalogue', [ProductController::class, 'index'])->name('catalogue');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
 Route::get('/panier', [CartController::class, 'index']);
 
 Route::get('/connexion', [ConnectionController::class, 'seConnecter']); #after / is what should be typed to pen the page
@@ -27,3 +29,5 @@ Route::get('/bon-de-livraison', [SaleController::class, 'bonDeLivraison']);
 Route::get('/livraison', [ConnectionController::class, 'livraison']);
 Route::get('/paiement', [ConnectionController::class, 'paiement']);
 Route::get('/confirmation', [ConnectionController::class, 'confirmation']);
+
+

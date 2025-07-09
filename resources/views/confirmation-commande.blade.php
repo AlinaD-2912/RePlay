@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Confiramtion de commande</title>
-    @include('head-links')
-</head>
-<body>
-@include('header')
+@extends('layouts.app')
 
-<main>
+@section('title', 'Catalogue')
+
+@section('content')
 <h1 class="font-audiowide text-center text-to-upper">Commande confirmé !</h1>
 
 
@@ -26,5 +19,5 @@
 
 </main>
 
-@include('footer')
+@endsection
 

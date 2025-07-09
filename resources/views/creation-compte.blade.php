@@ -1,15 +1,9 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Création de compte</title>
-    @include('head-links')
-</head>
-<body>
-@include('header')
+@extends('layouts.app')
 
-<main>
+@section('title', 'Catalogue')
+
+@section('content')
+
 <h1 class="font-audiowide text-center text-to-upper">CREEZ VOTRE COMPTE</h1>
 
 <div class="div-center">
@@ -47,6 +41,6 @@
         <a href="/connexion" class="font-medium font-dark-red">Connectez-vous</a>
     </p>
 </div>
-</main>
 
-@include('footer')
+
+@endsection

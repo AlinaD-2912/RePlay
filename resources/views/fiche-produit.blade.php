@@ -1,11 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fiche du produit</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title', 'Catalogue')
+
+@section('content')
     <h1>Fiche du produit {{ $id }}</h1>
-</body>
-</html>
+@endsection

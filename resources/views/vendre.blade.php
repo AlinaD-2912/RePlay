@@ -1,13 +1,8 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vendre</title>
-    @include('head-links')
-</head>
-<body>
-@include('header')
+@extends('layouts.app')
+
+@section('title', 'Catalogue')
+
+@section('content')
 
 <h1 class="font-audiowide text-center text-to-upper">Formulaire de vente</h1>
 
@@ -23,6 +18,4 @@
 
 </main>
 
-
-
-@include('footer')
+@endsection

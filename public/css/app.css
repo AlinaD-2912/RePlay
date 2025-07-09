@@ -459,6 +459,32 @@ input::placeholder {
 .filter-buttons button:hover {
     background-color: #B93A3C;
 }
+.img-catalogue{
+    height: 200px;
+    width: auto;
+}
+.grand-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.produit-catalogue {
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
 
 
 @media (min-width: 844px) {
