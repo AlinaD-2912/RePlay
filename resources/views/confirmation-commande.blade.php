@@ -9,6 +9,7 @@
 <body>
 @include('header')
 
+<main>
 <h1 class="font-audiowide text-center text-to-upper">Commande confirmé !</h1>
 
 
@@ -23,6 +24,7 @@
 
 </div>
 
+</main>
 
 @include('footer')
 

@@ -11,8 +11,8 @@
 
 <h1 class="font-audiowide text-center text-to-upper">Livraison</h1>
 
-<div class="div-center">
-    <form class="div-center">
+
+    <form class="livraison-conteiner">
         <input class="input font-16" type="text" id="nom" name="nom" placeholder="Nom">
         <input class="input font-16" type="text" id="adresse" name="adresse" placeholder="Adresse">
         <div>
@@ -29,7 +29,7 @@
         <input class=" btn-primary font-16 mg-tp-15" type="submit" value="S'inscrire" >
     </form>
 
-</div>
+
 
 <div class="div-points-relais">
     <h2 class="font-dark-red font-medium">A domicile</h2>
@@ -42,7 +42,7 @@
 <div class="div-points-relais">
 
     <h2 class="font-dark-red font-medium">Points relais</h2>
-    <div class="div-row">
+    <div class="div-column-point">
         <div class="point-relais">
             <p>Titre Adresse</p>
             <p>Prix</p>

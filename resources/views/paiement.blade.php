@@ -9,7 +9,7 @@
 <body>
 @include('header')
 
-
+<main>
 <div class="div-points-relais">
     <h1 class="font-audiowide text-center text-to-upper">Paiement</h1>
     <form >
@@ -21,17 +21,18 @@
     </form>
 
 </div>
-
-
-<div class="btn-right">
-    <button class="btn-primary ">Valider paiement</button>
+<div class="buttons-paiement">
+    <div >
+        <button class="btn-primary ">Valider paiement</button>
+    </div>
+    <div >
+        <p>
+            Commande : 50 €
+        </p>
+    </div>
 </div>
-<div class="btn-right">
-    <p>
-        Commande :
-    </p>
-</div>
 
 
+</main>
 
 @include('footer')

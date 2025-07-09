@@ -1,12 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Liste des produits</title>
+    <title>Catalogue des produits</title>
+    @include('head-links')
 </head>
 <body>
-    <h1>Liste des produits</h1>
+@include('header')
 
-</body>
-</html>
+<h1 class="font-audiowide text-center text-to-upper">Jeux en vente</h1>
+
+
+
+
+
+@include('footer')
+

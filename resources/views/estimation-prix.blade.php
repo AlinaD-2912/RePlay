@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Panier</title>
+    <title>Estimation prix</title>
     @include('head-links')
 </head>
 <body>
 @include('header')
 
 
-<h1 class="font-audiowide text-center text-to-upper">Mon panier</h1>
-
+<h1 class="font-audiowide text-center text-to-upper">Prix de vente</h1>
+<button class="btn-primary">Vendre mes jeux</button>
 
 
 @include('footer')
+

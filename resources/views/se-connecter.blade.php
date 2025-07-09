@@ -8,7 +8,7 @@
 </head>
 <body>
 @include('header')
-
+<main>
 <h1 class="font-audiowide text-center text-to-upper">Se connecter</h1>
 
 <div class="div-center">
@@ -34,6 +34,6 @@
         <a href="/inscription" class="font-medium font-dark-red">Inscrivez-vous</a>
     </p>
 </div>
-
+</main>
 
 @include('footer')
