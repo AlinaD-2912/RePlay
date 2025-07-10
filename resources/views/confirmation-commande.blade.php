@@ -3,7 +3,7 @@
 @section('title', 'Catalogue')
 
 @section('content')
-<h1 class="font-audiowide text-center text-to-upper">Commande confirmé !</h1>
+<h1 class="font-audiowide text-center text-to-upper font-21">Commande confirmé !</h1>
 
 
 

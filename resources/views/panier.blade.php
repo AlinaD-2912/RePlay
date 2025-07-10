@@ -5,7 +5,7 @@
 @section('content')
 
 
-<h1 class="font-audiowide text-center text-to-upper">Mon panier</h1>
+<h1 class="font-audiowide text-center text-to-upper font-21">Mon panier</h1>
 
 
 @endsection

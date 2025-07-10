@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="font-audiowide text-center text-to-upper">A propos</h1>
+<h1 class="font-audiowide text-center text-to-upper font-21">A propos</h1>
 <div class="image-container">
     <img src="{{asset('images/team.jpg')}}" alt="photo d'equipe" id="team-img">
 </div>
@@ -14,7 +14,7 @@
     <img src="{{asset('images/history-of-company.avif')}}" alt="" class="img-apropos">
     <div>
         <h2 class="font-dark-red font-21">Notre histoire</h2>
-        <p class="font-red font-16">L'idée de Replay est née autour d'une table de jeux,
+        <p class="font-red font-14">L'idée de Replay est née autour d'une table de jeux,
             là où les meilleurs souvenirs prennent vie... et parfois
             où s'accumulent les boîtes qui ne sortent plus du placard.
             C’est pourquoi nous avons lancé Replay : une plateforme simple,
@@ -26,16 +26,16 @@
 <div class="a-propos-conteiner">
     <div>
         <h2 class="font-dark-red font-21">Notre mission</h2>
-        <p class="font-red font-16">Chez Replay, notre mission est de faciliter la revente de jeux de société pour encourager une consommation plus responsable, circulaire et ludique !
+        <p class="font-red font-14">Chez Replay, notre mission est de faciliter la revente de jeux de société pour encourager une consommation plus responsable, circulaire et ludique !
 
             </p>
-        <button class="btn-primary">Estimer votre jeu</button>
+        <button class="btn-primary font-14">Estimer votre jeu</button>
     </div>
     <img src="{{asset('images/our-missions.png')}}" alt="" class="img-apropos">
 </div>
 
 <h2 class="font-dark-red text-center font-21 mg-tp-80">Programme qualité</h2>
-<div class="a-propos-conteiner font-red font-16">
+<div class="a-propos-conteiner font-red font-14">
     <p>Chaque jeu mis en vente sur Replay est vérifié avec soin par notre équipe. Grâce à notre Programme Qualité, nous vous garantissons des jeux complets, fonctionnels et classés selon leur état général.
 
         Nous utilisons 3 niveaux de qualité pour vous aider à choisir (ou vendre) en toute transparence :
@@ -44,7 +44,7 @@
 
 
 <div class="qualite-conteiner">
-    <div class="etat-conteiner">
+    <div class="etat-conteiner font-14">
         <h3>Très bon état</h3>
         <p>Presque comme neuf </p>
         <ul>
@@ -62,7 +62,7 @@
             </li>
         </ul>
     </div>
-    <div class="etat-conteiner">
+    <div class="etat-conteiner font-14">
         <h3>Bon état</h3>
         <p>Jeu en bon état général</p>
         <ul>
@@ -80,7 +80,7 @@
             </li>
         </ul>
     </div>
-    <div class="etat-conteiner">
+    <div class="etat-conteiner font-14">
         <h3>État correct</h3>
         <p>Jeu bien joué </p>
         <ul>

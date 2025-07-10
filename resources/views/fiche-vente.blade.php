@@ -4,12 +4,12 @@
 
 @section('content')
 
-<h1 class="font-audiowide text-center text-to-upper">Vente de jeux</h1>
+<h1 class="font-audiowide text-center text-to-upper font-21">Vente de jeux</h1>
 
 
 <div class="vente-jeu-conteiner">
-    <h2 class="font-dark-red font-21">Le Déroulement</h2>
-    <ol class="font-red">
+    <h2 class="font-dark-red font-16">Le Déroulement</h2>
+    <ol class="font-red font-14">
         <li >
             Remplissez un court formulaire sur les jeux que vous souhaitez vendre
         </li>
@@ -20,13 +20,13 @@
             Une fois la vente validée, nous vous ferons parvenir un bon de livraison par mail et dans votre compte, il vous suffit d’imprimer ce dernier et de déposer vos jeux en point relais. On se charge du reste !
         </li>
     </ol>
-    <button class="btn-primary">Vendre mes jeux</button>
+    <button class="btn-primary font-14">Vendre mes jeux</button>
 </div>
 
 
 
-<h2 class="font-dark-red text-center font-21 mg-tp-80">Programme qualité</h2>
-<div class="a-propos-conteiner font-red font-16">
+<h2 class="font-dark-red text-center font-16 mg-tp-80">Programme qualité</h2>
+<div class="a-propos-conteiner font-red font-14">
     <p>Chaque jeu mis en vente sur Replay est vérifié avec soin par notre équipe. Grâce à notre Programme Qualité, nous vous garantissons des jeux complets, fonctionnels et classés selon leur état général.
 
         Nous utilisons 3 niveaux de qualité pour vous aider à choisir (ou vendre) en toute transparence :
@@ -35,10 +35,10 @@
 
 
 <div class="qualite-conteiner">
-    <div class="etat-conteiner">
-        <h3>Très bon état</h3>
-        <p>Presque comme neuf </p>
-        <ul>
+    <div class="etat-conteiner font-14">
+        <h3 >Très bon état</h3>
+        <p >Presque comme neuf </p>
+        <ul >
             <li>
                 Boîte en excellent état, peu ou pas de traces d’usure
             </li>
@@ -49,13 +49,13 @@
                 Règle du jeu présente
             </li>
             <li>
-                Idéal pour offrir ou pour les collectionneurs exigeants
+                Idéal pour offrir ou pour les collectionneurs
             </li>
         </ul>
     </div>
-    <div class="etat-conteiner">
+    <div class="etat-conteiner font-14">
         <h3>Bon état</h3>
-        <p>Jeu en bon état général</p>
+        <p >Jeu en bon état général</p>
         <ul>
             <li>
                 Boîte avec quelques marques ou coins usés
@@ -71,10 +71,10 @@
             </li>
         </ul>
     </div>
-    <div class="etat-conteiner">
-        <h3>État correct</h3>
-        <p>Jeu bien joué </p>
-        <ul>
+    <div class="etat-conteiner font-14">
+        <h3 >État correct</h3>
+        <p >Jeu bien joué </p>
+        <ul >
             <li>
                 Boîte abîmée, rayures visibles ou scotchée
             </li>

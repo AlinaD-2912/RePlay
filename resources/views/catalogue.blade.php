@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1 class="font-audiowide text-center text-to-upper">Jeux en vente</h1>
+    <h1 class="font-audiowide text-center text-to-upper font-21">Jeux en vente</h1>
 
     <div class="search-section">
         <form class="search-bar">
