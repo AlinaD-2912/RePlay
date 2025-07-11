@@ -4,7 +4,7 @@
 
 @section('contenu')
 
-    <form action="{{ url('/test/' . $product->id) }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
+    <form action="{{ route('product.create') }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
         @csrf
         <label for="titre" class="font-14 font-dark-red mg-tp-15">Titre</label>
         <input class="input font-14" type="text" id="titre" name="titre" value="{{ $product->titre }}" required>
@@ -68,7 +68,7 @@
         </select>
 
 
-        <button type="submit">Modifier</button>
+        <button type="submit" class="btn-primary mg-tp-15">Modifier</button>
 
     </form>
 

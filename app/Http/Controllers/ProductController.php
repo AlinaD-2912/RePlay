@@ -17,6 +17,7 @@ class ProductController extends Controller
             ->get();
         return view('pages.catalogue', ['products' => $products]);
     }
+
     public function show($id)
     {
 //        $product = DB::select('SELECT * FROM products WHERE id = ? AND is_active = 1', [$id]);
@@ -28,28 +29,32 @@ class ProductController extends Controller
         return view('pages.fiche-produit', compact('product'));
     }
 
-    public function showProducts() {
+    public function showProducts()
+    {
         $products = Product::all();
 
         return view('backoffice.products', compact('products'));
 
     }
 
-    public function showProduct($id) {
+    public function showProduct($id)
+    {
         $product = Product::where('is_active', 1)->where('id', $id)->first();
 
         return view('backoffice.product', compact('product'));
 
     }
 
-    public function editProduct($id) {
+    public function editProduct($id)
+    {
         $product = Product::where('is_active', 1)->where('id', $id)->first();
 
         return view('backoffice.edit', compact('product'));
 
     }
 
-    public function updateProduct(Request $request, $id) {
+    public function updateProduct(Request $request, $id)
+    {
 
         $product = Product::find($id);
 
@@ -75,35 +80,51 @@ class ProductController extends Controller
             $file = $request->file('image');
             $filename = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('images'), $filename); // save file
-            $product->image = 'images/' . $filename;
+            $product->image = $filename;
         }
 
         $product->save();
 
         return redirect()->back()->with('success', 'Produit mis à jour');
 
-
-
-
-//        $request->validate([
-//            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // image types & max size 2MB
-//            'titre' => 'required',
-//            'prix' => 'required',
-//
-//        ]);
-//
-//        $product = Product::find($request->input('id'));
-//        if (!$product) {
-//            return redirect()->back()->withErrors(['error' => 'Produit non trouvé']);
-//        }
-//
-//        // If there is an uploaded image
-
-//
-//        // Save other product info here...
-//
-//        $product->save();
-//
-//        return redirect()->back()->with('success', 'Produit mis à jour');
     }
+
+    public function createProduct()
+    {
+        return view('backoffice.new');
+    }
+
+    public function createNewProduct(Request $request, $id){
+
+        $product = new Product();
+
+        $product->titre = $request->input('titre');
+        $product->description = $request->input('description');
+        $product->etat = $request->input('etat');
+        $product->quantite = $request->input('quantite');
+        $product->type = $request->input('type');
+        $product->prix = $request->input('prix');
+        $product['classification-par-age'] = $request->input('age');
+        $product->promotion_prix = $request->input('prix_promotion');
+        $product->is_promotion = $request->input('is_promotion'); // 1 ou 0
+        $product->is_active = $request->input('is_active'); // 1 ou 0
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images'), $filename);
+            $product->image = $filename;
+        }
+
+        $product->save();
+
+        return redirect()->back()->with('success', 'Produit créé avec succès');
+
+    }
+
+    public function backoffice () {
+        return view('backoffice.cheet');
+    }
+
 }
+
