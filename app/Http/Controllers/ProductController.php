@@ -15,16 +15,30 @@ class ProductController extends Controller
         $products = Product::where('is_active', 1)
             ->orderBy('prix', 'asc')
             ->get();
-        return view('catalogue', ['products' => $products]);
+        return view('pages.catalogue', ['products' => $products]);
     }
     public function show($id)
     {
 //        $product = DB::select('SELECT * FROM products WHERE id = ? AND is_active = 1', [$id]);
-        $product = Product::where('is_active', 1)->where('id', $id)->first();
+
         $product = Product::where('is_active', 1)->where('id', $id)->first();
 
 //        $product = $product[0];
 
-        return view('fiche-produit', compact('product'));
+        return view('pages.fiche-produit', compact('product'));
+    }
+
+    public function showProducts() {
+        $products = Product::all();
+
+        return view('backoffice.products', compact('products'));
+
+    }
+
+    public function showProduct($id) {
+        $product = Product::where('is_active', 1)->where('id', $id)->first();
+
+        return view('backoffice.product', compact('product'));
+
     }
 }

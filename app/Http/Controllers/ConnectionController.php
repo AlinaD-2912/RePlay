@@ -9,19 +9,22 @@ class ConnectionController extends Controller
 {
     public function seConnecter()
     {
-        return view('se-connecter');
+        return view('pages.se-connecter');
     }
     public function sInscrire()
     {
-        return view('creation-compte');
+        return view('pages.creation-compte');
     }
     public function livraison() {
-        return view('livraison');
+        return view('pages.livraison');
     }
     public function paiement() {
-        return view('paiement');
+        return view('pages.paiement');
     }
     public function confirmation() {
-        return view('confirmation-commande');
+        return view('pages.confirmation-commande');
+    }
+    public function connexionCompte() {
+        return view('pages.mon-compte');
     }
 }

@@ -23,7 +23,10 @@
     </div>
 
     <div class="btn-container">
-        <button class="btn-primary font-14">Voir tous les jeux</button>
+        <a href="/catalogue">
+            <button class="btn-primary font-14">Voir tous les jeux</button>
+        </a>
+
     </div>
 
     <div class="statistic-conteiner">
@@ -45,6 +48,9 @@
     </div>
 
     <div class="btn-container">
-        <button class="btn-primary font-14">Voir tous les jeux</button>
+        <a href="/catalogue">
+            <button class="btn-primary font-14">Voir tous les jeux</button>
+        </a>
+
     </div>
 @endsection

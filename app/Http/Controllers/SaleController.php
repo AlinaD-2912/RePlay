@@ -8,16 +8,16 @@ class SaleController extends Controller
 {
     public function ficheVente()
     {
-        return view('fiche-vente');
+        return view('pages.fiche-vente');
     }
     public function vendre(){
-        return view('vendre');
+        return view('pages.vendre');
     }
     public function estimationPrix(){
-        return view('estimation-prix');
+        return view('pages.estimation-prix');
     }
     public function bonDeLivraison (){
-        return view('bon-de-livraison');
+        return view('pages.bon-de-livraison');
     }
 
 }

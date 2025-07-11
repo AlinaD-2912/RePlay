@@ -11,6 +11,6 @@ class HomeController extends Controller
     {
 //        return '<h1>Homepage</h1>';
 
-        return view('homepage');
+        return view('pages.homepage');
     }
 }

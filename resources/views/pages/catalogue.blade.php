@@ -32,8 +32,9 @@
     <div class="grand-conteiner">
         @foreach($products as $product)
             <div class="produit-catalogue">
-
-                <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->titre }}" class="img-catalogue">
+                <a href="/product/{{ $product->id }}">
+                    <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->titre }}" class="img-catalogue">
+                </a>
                 <h3>{{ $product->titre }}</h3>
                 <p>{{ $product->description }}</p>
                 @if(!$product->is_promotion)
