@@ -507,8 +507,16 @@ input::placeholder {
     width: auto;
 }
 
-/*MON COMPTE*/
-
+/*EDIT*/
+.edit-conteiner {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto; /* essentiel por centrer*/
+}
 
 @media (min-width: 844px) {
     .nav-links {

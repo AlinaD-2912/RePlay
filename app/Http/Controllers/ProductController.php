@@ -41,4 +41,69 @@ class ProductController extends Controller
         return view('backoffice.product', compact('product'));
 
     }
+
+    public function editProduct($id) {
+        $product = Product::where('is_active', 1)->where('id', $id)->first();
+
+        return view('backoffice.edit', compact('product'));
+
+    }
+
+    public function updateProduct(Request $request, $id) {
+
+        $product = Product::find($id);
+
+        if (!$product) {
+            return redirect()->back()->with('error', 'Produit non trouvé');
+        }
+
+        $product->titre = $request->input('titre');
+        $product->description = $request->input('description');
+        $product->etat = $request->input('etat');
+        $product->quantite = $request->input('quantite');
+        $product->type = $request->input('type');
+        $product->prix = $request->input('prix');
+        $product['classification-par-age'] = $request->input('age');
+        $product->promotion_prix = $request->input('prix_promotion');
+        $product->is_promotion = $request->input('is_promotion'); // 1 ou 0
+        $product->is_active = $request->input('is_active'); // 1 ou 0
+
+
+        $product->prix = $request->input('prix');
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images'), $filename); // save file
+            $product->image = 'images/' . $filename;
+        }
+
+        $product->save();
+
+        return redirect()->back()->with('success', 'Produit mis à jour');
+
+
+
+
+//        $request->validate([
+//            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // image types & max size 2MB
+//            'titre' => 'required',
+//            'prix' => 'required',
+//
+//        ]);
+//
+//        $product = Product::find($request->input('id'));
+//        if (!$product) {
+//            return redirect()->back()->withErrors(['error' => 'Produit non trouvé']);
+//        }
+//
+//        // If there is an uploaded image
+
+//
+//        // Save other product info here...
+//
+//        $product->save();
+//
+//        return redirect()->back()->with('success', 'Produit mis à jour');
+    }
 }

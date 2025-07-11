@@ -34,4 +34,8 @@ Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte']);
 Route::prefix('backoffice')->group(function () { // prefix makes /backoffice automaticly presented in each pages links below
     Route::get('/products', [ProductController::class, 'showProducts']);
     Route::get('/product/{id}', [ProductController::class, 'showProduct']);
+    Route::get('/product/{id}/edit', [ProductController::class, 'editProduct']);
 });
+
+Route::post('/test/{id}', [ProductController::class, 'updateProduct']);
+
