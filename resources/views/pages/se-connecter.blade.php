@@ -26,7 +26,7 @@
 
 <div class="div-center">
     <button class="btn-secondary font-14 mg-tp-15">Se connecter avec Google</button>
-    <p class="font-dark-red font-14">Pas de compte?
+    <p class="font-dark-red font-14 mg-tp-15">Pas de compte?
         <a href="/inscription" class="font-medium font-dark-red">Inscrivez-vous</a>
     </p>
 </div>

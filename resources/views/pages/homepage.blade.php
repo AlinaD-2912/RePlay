@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <img src="{{asset('images/replay-2.0.png')}}" alt="Replay la seconde main du jeu" id="logo-homepage">
+    <img src="{{asset('images/replay-2.1.png')}}" alt="Replay la seconde main du jeu" id="logo-homepage">
 
     <div class="bg-red" id="avertissment-accueil">
         <p class="font-white font-14 font-roboto font-medium" id="p-avertissment">

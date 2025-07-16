@@ -37,7 +37,7 @@
 
 <div class="div-center">
     <button class="btn-secondary font-14 mg-tp-15">Se connecter avec Google</button>
-    <p class="font-dark-red font-14 text-center">Vous avez déjà un compte?
+    <p class="font-dark-red font-14 text-center mg-tp-15">Vous avez déjà un compte?
         <a href="/connexion" class="font-medium font-dark-red">Connectez-vous</a>
     </p>
 </div>

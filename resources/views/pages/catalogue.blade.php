@@ -35,22 +35,22 @@
                 <a href="/product/{{ $product->id }}">
                     <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->titre }}" class="img-catalogue">
                 </a>
-                <h3>{{ $product->titre }}</h3>
-                <p>{{ $product->description }}</p>
+                <h3 class="font-dark-red font-16 font-roboto">{{ $product->titre }}</h3>
+                <p class="font-red font-14 font-roboto">{{ $product->description }}</p>
                 @if(!$product->is_promotion)
-                    <p>Prix: {{ $product->prix }}€</p>
+                    <p class="font-red font-14 font-roboto"><span class="font-dark-red font-14 font-robot">Prix:</span> {{ $product->prix }}€</p>
                 @endif
 
 
                 @if($product->is_promotion)
-                    <p>EN PROMOTION!</p>
+                    <p class="font-dark-red font-14 font-roboto">EN PROMOTION!</p>
                     @if($product->promotion_prix)
-                        <p>Prix promo: {{ $product->promotion_prix }}€</p>
+                        <p class="font-red font-14 fo,nt-roboto"><span class="font-drak-red font-14 font-roboto">Prix promo: </span>{{ $product->promotion_prix }}€</p>
                     @endif
                 @endif
 
                 {{--            <p>Âge: {{ $product->{'classification-par-age'} }}</p>--}}
-                <a href="{{ route('product.show', $product->id) }}">Voir détails</a>
+                <a href="{{ route('product.show', $product->id) }}" class="font-dark-red font-14">Voir détails</a>
             </div>
         @endforeach
     </div>
