@@ -382,6 +382,7 @@ input::placeholder {
     align-items: center;
     background-color: #9C282A;
     color: #FAFAFA;
+    padding: 10px;
     border-radius: 10%;
 }
 .vente-jeu-conteiner {
