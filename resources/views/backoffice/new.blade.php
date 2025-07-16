@@ -4,7 +4,7 @@
 
 @section('contenu')
 
-    <form action="{{ url('/add-new') }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
+    <form action="{{ route('product.add') }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
         @csrf
         <label for="titre" class="font-14 font-dark-red mg-tp-15">Titre</label>
         <input class="input font-14" type="text" id="titre" name="titre"  required>
@@ -33,18 +33,15 @@
         <label for="age" class="font-14 font-dark-red mg-tp-15">Classification par âge</label>
         <input class="input font-14" type="text" id="age" name="age" required>
 
-        {{-- En promotion ? --}}
         <label for="is_promotion" class="font-14 font-dark-red mg-tp-15">En promotion ?</label>
         <select class="input font-14" id="is_promotion" name="is_promotion" required>
             <option value="1" {{ old('is_promotion') == '1' ? 'selected' : '' }}>Oui</option>
             <option value="0" {{ old('is_promotion') == '0' ? 'selected' : '' }}>Non</option>
         </select>
 
-        {{-- Prix promotion --}}
         <label for="prix_promotion" class="font-14 font-dark-red mg-tp-15">Prix promotion</label>
-        <input class="input font-14" type="number" id="prix_promotion" name="prix_promotion" required>
+        <input class="input font-14" type="number" id="prix_promotion" name="prix_promotion">
 
-        {{-- Actif ? --}}
         <label for="is_active" class="font-14 font-dark-red mg-tp-15">Actif ?</label>
         <select class="input font-14" id="is_active" name="is_active" required>
             <option value="1" {{ old('is_active') == '1' ? 'selected' : '' }}>Oui</option>
@@ -52,7 +49,7 @@
         </select>
 
 
-        <button type="submit" class="btn-primary mg-tp-15">Modifier</button>
+        <button type="submit" class="btn-primary mg-tp-15">Ajouter</button>
 
     </form>
 

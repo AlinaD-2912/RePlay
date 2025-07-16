@@ -33,15 +33,15 @@ Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte']);
 // BACKOFFICE
 Route::prefix('backoffice')->group(function () { // prefix makes /backoffice automaticly presented in each pages links below
     Route::get('/product/new', [ProductController::class, 'createProduct']);
-    Route::get('/products', [ProductController::class, 'showProducts']);
-    Route::get('/product/{id}', [ProductController::class, 'showProduct']);
+    Route::get('/products', [ProductController::class, 'showProducts'])->name('product.list');
+    Route::get('/products/{id}', [ProductController::class, 'showProduct']);
     Route::get('/product/{id}/edit', [ProductController::class, 'editProduct']);
+    Route::delete('/backoffice/product/{id}/delete', [ProductController::class, 'deleteProduct'])->name('product.delete');
 
-
-
+    Route::post('/edit/{id}', [ProductController::class, 'updateProduct'])->name('product.edit');
+    Route::post('/add-new', [ProductController::class, 'createNewProduct'])->name('product.add');
 
 });
 Route::get('/backoffice', [ProductController::class, 'backoffice']);
-Route::post('/test/{id}', [ProductController::class, 'updateProduct']);
-Route::post('/add-new', [ProductController::class, 'createNewProduct']);
+
 

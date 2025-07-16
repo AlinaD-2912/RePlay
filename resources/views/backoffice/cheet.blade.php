@@ -3,11 +3,15 @@
 @section('title', 'Cheat-sheet')
 
 @section('contenu')
+    <h1 class="text-center">Cheat-sheet for backoffice</h1>
     <div>
-        <p>/backoffice +</p>
-        <p>/product/new</p>
-        <p>/products</p>
-        <p>/product/{id}</p>
-        <p>/product/{id}/edit</p>
+        <h2>/backoffice +</h2>
+        <ul>
+            <li>/product/new <br> - to create new product</li>
+            <li>/products <br> - to list the products in table</li>
+            <li>/product/{id} <br> - to see all the information about the product</li>
+            <li>/product/{id}/edit <br> - to edit an existing product</li>
+        </ul>
+
     </div>
 @endsection

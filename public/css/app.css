@@ -54,6 +54,7 @@ main {
     font-family: 'Roboto', sans-serif;
 }
 .font-audiowide {
+    padding: 20px;
     font-family: 'Audiowide', cursive;
 }
 .no-mg-top {
@@ -177,7 +178,7 @@ input::placeholder {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -517,6 +518,9 @@ input::placeholder {
     max-width: 300px;
     margin: 0 auto; /* essentiel por centrer*/
 }
+
+
+
 
 @media (min-width: 844px) {
     .nav-links {

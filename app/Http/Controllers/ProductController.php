@@ -94,7 +94,7 @@ class ProductController extends Controller
         return view('backoffice.new');
     }
 
-    public function createNewProduct(Request $request, $id){
+    public function createNewProduct(Request $request){
 
         $product = new Product();
 
@@ -125,6 +125,24 @@ class ProductController extends Controller
     public function backoffice () {
         return view('backoffice.cheet');
     }
+
+    public function deleteProduct($id)
+    {
+        $product = Product::findOrFail($id);
+
+        if ($product->image && file_exists(public_path('images/' . $product->image))) {
+            unlink(public_path('images/' . $product->image));
+        }
+
+        $product->delete();
+
+        return redirect()->route('product.list')->with('success', 'Produit supprimé avec succès.');
+    }
+
+
+
+
+
 
 }
 

@@ -22,6 +22,14 @@
             @else
                 <p class="font-dark-red font-14">Le produit n'est pas en vente</p>
             @endif
+            <a href="/backoffice/product/{{$product -> id}}/edit">
+                <button class="btn-primary">Modifier</button>
+            </a>
+            <form action="{{ route('product.delete', $product->id) }}" method="POST" onsubmit="return confirm('Confirmer la suppression ?');" style="display: inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn-secondary">Supprimer</button>
+            </form>
         </div>
     </div>
 

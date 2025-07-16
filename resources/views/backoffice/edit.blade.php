@@ -4,7 +4,7 @@
 
 @section('contenu')
 
-    <form action="{{ route('product.create') }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
+    <form action="{{ route('product.edit', $product->id) }}" method="POST" enctype="multipart/form-data" class="edit-conteiner">
         @csrf
         <label for="titre" class="font-14 font-dark-red mg-tp-15">Titre</label>
         <input class="input font-14" type="text" id="titre" name="titre" value="{{ $product->titre }}" required>
@@ -58,7 +58,7 @@
         {{-- Prix promotion --}}
         <label for="prix_promotion" class="font-14 font-dark-red mg-tp-15">Prix promotion</label>
         <input class="input font-14" type="number" id="prix_promotion" name="prix_promotion"
-               value="{{ $product->promotion_prix }}" required>
+               value="{{ $product->promotion_prix }}" >
 
         {{-- Actif ? --}}
         <label for="is_active" class="font-14 font-dark-red mg-tp-15">Actif ?</label>

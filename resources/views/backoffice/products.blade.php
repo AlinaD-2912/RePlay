@@ -48,7 +48,7 @@
                         <td>{{ $product->type }}</td>
                         <td>{{ $product['classification-par-age'] }}</td>
                         <td>
-                            <a href="/backoffice/product/{{ $product->id }}">
+                            <a href="/backoffice/products/{{ $product->id }}">
                                 <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->titre }}" class="img-fluid rounded" width="70">
                             </a>
                         </td>
@@ -57,6 +57,12 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="/backoffice/product/new" >
+            <button class="btn-primary">Ajouter un produit</button>
+        </a>
     </div>
 
 @endsection
