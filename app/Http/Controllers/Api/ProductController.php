@@ -14,4 +14,19 @@ class ProductController extends Controller
 
         return response()->json($products);
     }
+
+    public function show($id)
+    {
+        // Rechercher le produit avec sa catégorie
+        $product = Product::with('category')->find($id);
+
+        // Si le produit n'existe pas
+        if (!$product) {
+            return response()->json(['error' => 'Produit non trouvé'], 404);
+        }
+
+        // Retourner le produit et sa catégorie en JSON
+        return response()->json($product);
+    }
+
 }
