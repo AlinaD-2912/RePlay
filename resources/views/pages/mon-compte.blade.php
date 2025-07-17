@@ -4,24 +4,26 @@
 
 @section('content')
     <div class="container">
-        <h1 class="mb-4">Mon compte</h1>
+        <h1 class="font-21 font-audiowide font-dark-red text-center">Mon compte</h1>
 
         <div class="row">
             <div class="col-md-8">
+
                 <!-- Activité & historique -->
-                <div class="section-box">
-                    <h5>Activité & historique</h5>
+                <div class="activity-conteiner">
+                    <h2 class="font-16 font-dark-red font-roboto">Activité & historique</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#">Historique des achats &gt;</a></li>
-                        <li><a href="#">Historique des ventes &gt;</a></li>
-                        <li><a href="#">Liste de souhaits &gt;</a></li>
-                        <li><a href="#">Notifications &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto"  href="#">Historique des achats &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Historique des ventes &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Liste de souhaits &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Notifications &gt;</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4 text-center">
+
                 <!-- Profil -->
-                <div class="mb-2">
+                <div class="profile-conteiner">
                     <div class="profile-img mx-auto mb-2"></div>
                     <strong>Prénom Nom</strong><br>
                     <small>e-mail</small>
@@ -37,12 +39,12 @@
             <!-- Portefeuille & paramètres -->
             <div class="col-md-4">
                 <div class="section-box">
-                    <h5>Portefeuille & paramètres</h5>
+                    <h2 class="font-16 font-dark-red font-roboto">Portefeuille & paramètres</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#">Portefeuille électronique &gt;</a></li>
-                        <li><a href="#">Historique des paiements &gt;</a></li>
-                        <li><a href="#">Méthodes de paiement &gt;</a></li>
-                        <li><a href="#">Mes préférences &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Portefeuille électronique &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Historique des paiements &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Méthodes de paiement &gt;</a></li>
+                        <li><a class="font-red font-14 font-roboto" href="#">Mes préférences &gt;</a></li>
                     </ul>
                 </div>
             </div>
