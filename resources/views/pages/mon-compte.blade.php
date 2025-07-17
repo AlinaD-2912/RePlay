@@ -88,6 +88,11 @@
         </div>
 
     </div>
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit">Se déconnecter</button>
+    </form>
+
 
 
 @endsection

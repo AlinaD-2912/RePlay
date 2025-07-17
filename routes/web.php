@@ -16,7 +16,8 @@ use App\Http\Controllers\CartController;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware('auth')->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -50,7 +51,7 @@ Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte']);
 
 
 // BACKOFFICE
-Route::prefix('backoffice')->group(function () { // prefix makes /backoffice automaticly presented in each pages links below
+Route::prefix('backoffice')->middleware('auth')->group(function () { // prefix makes /backoffice automaticly presented in each pages links below
     Route::get('/product/new', [ProductController::class, 'createProduct']);
     Route::get('/products', [ProductController::class, 'showProducts'])->name('product.list');
     Route::get('/products/{id}', [ProductController::class, 'showProduct']);
