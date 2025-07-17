@@ -3,7 +3,7 @@
 @section('title', 'Catalogue')
 
 @section('content')
-<h1 class="font-audiowide text-center text-to-upper font-21">Commande confirmé !</h1>
+    <h1 class="font-audiowide text-center text-to-upper font-21">Commande confirmé !</h1>
 
 
 
@@ -11,12 +11,7 @@
         Un email vient de vous être envoyé.
     </p>
 
-<div class="div-points-relais">
-
-    <h2 class="font-dark-red font-medium">Détail de votre commande</h2>
-
-</div>
-
+    <h2 class="font-dark-red text-center font-medium">Détail de votre commande</h2>
 
 @endsection
 

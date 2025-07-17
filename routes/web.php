@@ -12,7 +12,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/catalogue', [ProductController::class, 'index'])->name('catalogue');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
-Route::get('/panier', [CartController::class, 'index']);
+Route::get('/panier', [CartController::class, 'index'])->name('cart.index');
 Route::get('/apropos', [AboutController::class, 'index']);
 
 //VENDRE
@@ -42,6 +42,10 @@ Route::prefix('backoffice')->group(function () { // prefix makes /backoffice aut
     Route::post('/add-new', [ProductController::class, 'createNewProduct'])->name('product.add');
 
 });
+
 Route::get('/backoffice', [ProductController::class, 'backoffice']);
+
+Route::post('/panier/update', [CartController::class, 'update'])->name('cart.update');
+
 
 
