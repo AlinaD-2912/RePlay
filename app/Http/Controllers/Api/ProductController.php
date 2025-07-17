@@ -60,4 +60,41 @@ class ProductController extends Controller
         ], 201);
     }
 
+    public function modify (Request $request, $id){
+        $validated = $request->validate([
+            'titre' => 'required|string|max:255',
+            'description' => 'required|string|max:1000',
+            'etat' => 'required|string|max:255',
+            'quantite' => 'required|integer|min:1',
+            'type' => 'required|string|max:100',
+            'prix' => 'required|numeric|min:0',
+            'age' => 'required|string|max:10',
+            'prix_promotion' => 'nullable|numeric|min:0',
+            'is_promotion' => 'required|in:0,1',
+            'is_active' => 'required|in:0,1',
+            'image' => 'nullable|string' // Accept image name as string in JSON
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        $product->update([
+            'titre' => $validated['titre'],
+            'description' => $validated['description'],
+            'etat' => $validated['etat'],
+            'quantite' => $validated['quantite'],
+            'type' => $validated['type'],
+            'prix' => $validated['prix'],
+            'classification-par-age' => $validated['age'],
+            'promotion_prix' => $validated['prix_promotion'] ?? null,
+            'is_promotion' => (bool) $validated['is_promotion'],
+            'is_active' => (bool) $validated['is_active'],
+            'image' => $validated['image'] ?? $product->image, // keep existing if not changed
+        ]);
+
+        return response()->json([
+            'message' => 'Produit mis à jour avec succès',
+            'product' => $product->load('category')
+        ]);
+    }
+
 }
