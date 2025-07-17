@@ -9,16 +9,18 @@ class Product extends Model
     protected $fillable = [
         'titre',
         'description',
-        'etat',
+        'prix',
         'quantite',
         'type',
-        'prix',
+        'etat',
         'classification-par-age',
         'promotion_prix',
         'is_promotion',
+        'image',
         'is_active',
-        'image'
+        'category_id',
     ];
+
 
     public function category()
     {
