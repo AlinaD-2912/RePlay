@@ -61,6 +61,10 @@ Route::prefix('backoffice')->middleware('auth')->group(function () { // prefix m
     Route::post('/edit/{id}', [ProductController::class, 'updateProduct'])->name('product.edit');
     Route::post('/add-new', [ProductController::class, 'createNewProduct'])->name('product.add');
 
+    Route::get('/test-auth', function () {
+        return auth()->check() ? 'Logged in' : 'Not logged in';
+    })->middleware('auth');
+
 });
 
 Route::get('/backoffice', [ProductController::class, 'backoffice']);
