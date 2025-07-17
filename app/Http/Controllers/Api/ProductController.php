@@ -97,4 +97,20 @@ class ProductController extends Controller
         ]);
     }
 
+    public function destroy (Request $request, $id){
+        $product = Product::findOrFail($id);
+
+        // Supprimer l'image du dossier public/images si elle existe
+        if ($product->image && file_exists(public_path('images/' . $product->image))) {
+            unlink(public_path('images/' . $product->image));
+        }
+
+        $product->delete();
+
+        return response()->json([
+            'message' => 'Produit supprimé avec succès',
+            'product' => $product
+        ]);
+    }
+
 }
