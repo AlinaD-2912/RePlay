@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConnectionController extends Controller
 {
@@ -26,5 +27,25 @@ class ConnectionController extends Controller
     }
     public function connexionCompte() {
         return view('pages.mon-compte');
+    }
+
+    public function login(Request $request) {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate(); // Prevent session fixation
+
+            // Redirect to mon-compte page (or wherever)
+//            return redirect()->intended('pages.mon-compte');
+            return view('pages.mon-compte');
+        }
+
+        return back()->withErrors([
+            'email' => 'Les identifiants sont invalides.',
+        ])->onlyInput('email');
+
     }
 }

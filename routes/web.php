@@ -47,7 +47,10 @@ Route::get('/inscription', [ConnectionController::class, 'sInscrire']); # sInscr
 Route::get('/livraison', [ConnectionController::class, 'livraison']);
 Route::get('/paiement', [ConnectionController::class, 'paiement']);
 Route::get('/confirmation', [ConnectionController::class, 'confirmation']);
-Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte']);
+//Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte']);
+Route::get('/mon-compte', [ConnectionController::class, 'connexionCompte'])->middleware('auth');
+
+Route::post('/connexion', [ConnectionController::class, 'login'])->name('login.custom');
 
 
 // BACKOFFICE
@@ -60,12 +63,9 @@ Route::prefix('backoffice')->middleware('auth')->group(function () { // prefix m
 
     Route::post('/edit/{id}', [ProductController::class, 'updateProduct'])->name('product.edit');
     Route::post('/add-new', [ProductController::class, 'createNewProduct'])->name('product.add');
-
-    Route::get('/test-auth', function () {
-        return auth()->check() ? 'Logged in' : 'Not logged in';
-    })->middleware('auth');
-
 });
+Route::get('/backoffice', [ProductController::class, 'backoffice'])->middleware('auth');
+
 
 Route::get('/backoffice', [ProductController::class, 'backoffice']);
 

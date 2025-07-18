@@ -8,7 +8,8 @@
 <h1 class="font-audiowide text-center text-to-upper font-21">Se connecter</h1>
 
 <div class="div-center">
-    <form class="div-center">
+    <form class="div-center" action="{{ route('login.custom') }}" method="post">
+        @csrf
         <input class="input font-14" type="email" id="email" name="email" placeholder="E-mail ">
         <input class="input font-14" type="password" id="password" name="password" placeholder="Mot de passe">
         <input class=" btn-primary font-14 mg-tp-15" type="submit" value="Se connecter" >

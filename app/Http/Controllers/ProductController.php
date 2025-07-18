@@ -58,7 +58,7 @@ class ProductController extends Controller
         $validated = $request->validate([
             'titre' => 'required|string|max:255',
             'description' => 'required|string|max:1000',
-            'etat' => 'required|string|max:255', // Changed to string with max 255
+            'etat' => 'required|string|max:255',
             'quantite' => 'required|integer|min:1',
             'type' => 'required|string|max:100',
             'prix' => 'required|numeric|min:0',
@@ -71,11 +71,10 @@ class ProductController extends Controller
 
         $product = Product::findOrFail($id);
 
-        // Prepare data for mass assignment
         $updateData = [
             'titre' => $validated['titre'],
             'description' => $validated['description'],
-            'etat' => $validated['etat'], // No longer converting to lowercase
+            'etat' => $validated['etat'],
             'quantite' => $validated['quantite'],
             'type' => $validated['type'],
             'prix' => $validated['prix'],
@@ -85,7 +84,7 @@ class ProductController extends Controller
             'is_active' => (bool) $validated['is_active'],
         ];
 
-        // Handle image upload
+
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $filename = time() . '_' . $file->getClientOriginalName();
@@ -93,7 +92,7 @@ class ProductController extends Controller
             $updateData['image'] = $filename;
         }
 
-        // Update product using mass assignment
+
         $product->update($updateData);
 
         return redirect()->back()->with('success', 'Produit mis à jour');

@@ -92,7 +92,14 @@
     </div>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <button type="submit">Se déconnecter</button>
+        <button type="submit">Se déconnecter de backoffice</button>
+    </form>
+
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="btn btn-danger">
+            Se déconnecter
+        </button>
     </form>
 
 
