@@ -556,7 +556,7 @@ input::placeholder {
 
 @media (min-width: 844px) {
     .nav-links {
-        gap: 90px;
+        gap: 70px;
     }
     .font-14 {
         font-size: 15px;
