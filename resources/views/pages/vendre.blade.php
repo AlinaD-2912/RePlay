@@ -19,3 +19,12 @@
 </main>
 
 @endsection
+
+User::create([
+'name' => 'Vendeur',
+'email' => 'vendeur@example.com',
+'password' => Hash::make('password'),
+'role' => 'vendeur',
+]);
+$user = User::where('email', 'test@gmail.com')->first();
+$user->delete();

@@ -289,7 +289,10 @@ input::placeholder {
     height: 1px;
     background-color: #9C282A;
 }
-
+#img-quote{
+    height: 40px;
+    width: auto;
+}
 
 /*LIVRAISON*/
 
@@ -629,6 +632,14 @@ input::placeholder {
     }
     .img-produit {
         height: 400px;
+        width: auto;
+    }
+    .card-img {
+        width: 190px;
+        height: auto;
+    }
+    #img-quote{
+        height: 100px;
         width: auto;
     }
 
