@@ -99,7 +99,7 @@
             </li>
             <li>
                 Communautaire :
-                <span class="font-16 font-red">vos jeux trouvent une nouvelle famille passionnée.</span>
+                <span class="font-16 font-red">here some new texte vos jeux trouvent une nouvelle famille passionnée.</span>
             </li>
         </ul>
     </div>
