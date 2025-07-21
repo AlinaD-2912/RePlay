@@ -23,10 +23,15 @@
 
                 <div class="panier-conteiner">
                     <img src="{{ asset('images/' . $item['image'] )}}" alt="{{ $item['titre'] }}" class="img-ventes">
-                    <div>
+
+                    <div class="panier-details">
                         <h2 class="font-red font-roboto font-21">{{ $item['titre'] }}</h2>
-                        <label class="font-dark-red font-14 font-roboto">Quantité : </label>
-                        <input type="number" name="quantities[{{ $item['id'] }}]" value="{{ $item['quantity'] }}" min="1" class="input-panier font-14 font-roboto text-center">
+
+                        <div class="panier-row">
+                            <label class="font-dark-red font-14 font-roboto">Quantité : </label>
+                            <input type="number" name="quantities[{{ $item['id'] }}]" value="{{ $item['quantity'] }}" min="1" class="input-panier font-14 font-roboto text-center">
+                        </div>
+
                         <p class="font-dark-red font-roboto font-14">Etat : <span class="font-red font-14 font-roboto">{{ $item['etat'] }}</span></p>
 
                         <div class="price-container">
@@ -35,19 +40,24 @@
                         </div>
                     </div>
 
-
                     @csrf
                 </div>
+
             @endforeach
             <div class="btn-container">
                 <button type="submit" class="btn-primary">Mettre à jour</button>
             </div>
 
-            <p class="font-16 font-dark-red font-roboto text-center mg-tp-80 font-medium">Prix total : <span class="font-16 font-roboto font-red">{{ $total }} €</span></p>
+            <p class="font-21 font-dark-red font-roboto text-center mg-tp-80 font-medium">Prix total : <span class="font-16 font-roboto font-red">{{ $total }} €</span></p>
             <p class="font-14 font-dark-red font-roboto text-center ">Coût de livraison : Gratuit</p>
 
+{{--            <div class="btn-container mg-tp-80">--}}
+{{--                <a href="/livraison">--}}
+{{--                    <button class="btn-primary font-14">Passer commande</button>--}}
+{{--                </a>--}}
+{{--            </div>--}}
             <div class="btn-container mg-tp-80">
-                <button type="submit" class="btn-primary font-14">Passer commande</button>
+                 <a href="/livraison" class="btn-primary font-14">Passer commande</a>
             </div>
 
         </form>
