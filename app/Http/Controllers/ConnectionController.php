@@ -26,6 +26,7 @@ class ConnectionController extends Controller
         return view('pages.confirmation-commande');
     }
     public function connexionCompte() {
+
         return view('pages.mon-compte');
     }
 

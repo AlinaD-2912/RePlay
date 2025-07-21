@@ -69,4 +69,7 @@ Route::get('/backoffice', [ProductController::class, 'backoffice'])->middleware(
 
 Route::get('/backoffice', [ProductController::class, 'backoffice']);
 
+//Route::post('/panier/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/panier/add', [CartController::class, 'add'])->name('cart.add');
 Route::post('/panier/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/panier/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');

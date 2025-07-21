@@ -105,7 +105,6 @@ main {
     background-color: #FAFAFA;
     color: #400F10;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     font-weight: 700;
     padding: 12px 30px;
     border-radius: 45px;
@@ -551,8 +550,29 @@ input::placeholder {
     margin: 0 auto; /* essentiel por centrer*/
 }
 
+/*PANIER*/
+.input-panier {
+    margin-top: 15px;
+    border-radius: 45px;
+    background-color: #FAFAFA;
+    border: 2px solid #CE3437;
+    color: #400F10;
+    width: 80px;
+    height: 50px;
+    padding: 15px;
+    cursor: pointer;
 
-
+}
+.panier-conteiner {
+    display: flex;
+    flex: 2;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto; /* essentiel pour centrer*/
+}
 
 @media (min-width: 844px) {
     .nav-links {
@@ -642,6 +662,8 @@ input::placeholder {
         height: 100px;
         width: auto;
     }
+
+
 
 
 }
