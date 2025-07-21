@@ -81,7 +81,6 @@
             </li>
         </ol>
     </div>
-
     <div class="vente-jeu-conteiner">
         <h2 class="font-dark-red font-21 mg-tp-15">Pourquoi choisir Replay ?</h2>
         <ul class="font-dark-red font-16 mg-tp-15">
@@ -99,9 +98,7 @@
             </li>
             <li>
                 Communautaire :
-
-                <span class="font-16 font-red">here some texte vos jeux trouvent une nouvelle famille passionnée. est en plus</span>
-
+                <span class="font-16 font-red">vos jeux trouvent une nouvelle famille passionnée. </span>
             </li>
         </ul>
     </div>

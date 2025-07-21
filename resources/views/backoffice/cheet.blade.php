@@ -9,7 +9,7 @@
         <ul>
             <li>/product/new <br> - to create new product</li>
             <li>/products <br> - to list the products in table</li>
-            <li>/product/{id} <br> - to see all the information about the product</li>
+            <li>/products/{id} <br> - to see all the information about the product</li>
             <li>/product/{id}/edit <br> - to edit an existing product</li>
         </ul>
 

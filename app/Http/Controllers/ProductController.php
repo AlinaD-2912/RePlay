@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -31,14 +32,21 @@ class ProductController extends Controller
 
     public function showProducts()
     {
-        $products = Product::all();
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
 
+        $products = Product::all();
         return view('backoffice.products', compact('products'));
 
     }
 
     public function showProduct($id)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         $product = Product::where('is_active', 1)->where('id', $id)->first();
 
         return view('backoffice.product', compact('product'));
@@ -47,6 +55,10 @@ class ProductController extends Controller
 
     public function editProduct($id)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         $product = Product::where('is_active', 1)->where('id', $id)->first();
 
         return view('backoffice.edit', compact('product'));
@@ -55,6 +67,10 @@ class ProductController extends Controller
 
     public function updateProduct(Request $request, $id)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         $validated = $request->validate([
             'titre' => 'required|string|max:255',
             'description' => 'required|string|max:1000',
@@ -100,11 +116,20 @@ class ProductController extends Controller
 
     public function createProduct()
     {
+//        return view('backoffice.new');
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         return view('backoffice.new');
     }
 
     public function createNewProduct(Request $request)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         $validated = $request->validate([
             'titre' => 'required|string|max:255',
             'description' => 'required|string|max:1000',
@@ -153,6 +178,10 @@ class ProductController extends Controller
 
     public function deleteProduct($id)
     {
+        if (Auth::user()->role !== 'admin') {
+            abort(403, 'Accès refusé : seuls les administrateurs peuvent accéder à cette page.');
+        }
+
         $product = Product::findOrFail($id);
 
         if ($product->image && file_exists(public_path('images/' . $product->image))) {
