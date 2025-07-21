@@ -558,7 +558,7 @@ input::placeholder {
     border: 2px solid #CE3437;
     color: #400F10;
     width: 80px;
-    height: 50px;
+    height: 30px;
     padding: 15px;
     cursor: pointer;
 
@@ -568,12 +568,28 @@ input::placeholder {
     flex: 2;
     justify-content: start;
     align-items: start;
-    flex-direction: column;
+    flex-direction: row;
     padding: 20px;
-    max-width: 300px;
+    gap: 10px;
+    max-width: 600px;
     margin: 0 auto; /* essentiel pour centrer*/
 }
-
+.btn-supprimer {
+    background-color: #FAFAFA;
+    color: #400F10;
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: 700;*/
+    padding: 10px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: 2px solid #9C282A;
+}
+.price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
 @media (min-width: 844px) {
     .nav-links {
         gap: 70px;
