@@ -33,10 +33,12 @@
                         </div>
 
                         <p class="font-dark-red font-roboto font-14">Etat : <span class="font-red font-14 font-roboto">{{ $item['etat'] }}</span></p>
-
+                        @php
+                            $prixTotal = $item['prix'] * $item['quantity'];
+                        @endphp
                         <div class="price-container">
                             <button formaction="{{ route('cart.remove', ['id' => $item['id']]) }}" formmethod="POST" class="btn-supprimer font-red font-14 font-roboto">Supprimer</button>
-                            <p class="font-dark-red font-roboto font-16 font-medium">{{ $item['prix'] }}€</p>
+                            <p class="font-dark-red font-roboto font-16 font-medium"> {{ $prixTotal }}€</p>
                         </div>
                     </div>
 
