@@ -32,9 +32,21 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ---
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/ff1a688c-5f88-4994-b007-f67ed18878ff" />
+
+---
+
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/77264678-b9f6-414a-a875-cac445d05f92" />
+
+---
+
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/35aa1f7f-740f-49e6-beb0-cab15d79b13d" />
+
+---
+
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/34d5add3-e2f1-499c-9c52-da342e1a9024" />
+
+---
+
 
 
 
