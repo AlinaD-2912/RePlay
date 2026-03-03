@@ -1,27 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    </a>
 </p>
 
-## About Laravel
+# Replay – La seconde main du jeu
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Replay est une application web mobile-first dédiée à la vente de jeux de société d’occasion.  
+La plateforme permet aux utilisateurs de consulter des annonces, proposer leurs propres jeux à la vente et acheter des jeux de manière simple et intuitive.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ce projet a été entièrement développé avec Laravel et met l’accent sur la programmation orientée objet, l’architecture MVC et la gestion de base de données via les migrations.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## 🖼️ Aperçu
+## À propos du projet
+
+Replay est :
+
+- Une application conçue en mobile-first
+- Une marketplace spécialisée dans les jeux de société d’occasion
+- Développée entièrement avec Laravel (PHP)
+- Construite avec le moteur de templates Blade (HTML et directives Laravel)
+- Basée sur les principes de la programmation orientée objet
+- Connectée à une base de données SQLite
+- Structurée grâce aux migrations Laravel pour la gestion du schéma de la base de données
+
+L’objectif principal de ce projet était de mettre en pratique le développement d’une application complète avec Laravel en respectant les bonnes pratiques professionnelles.
+
+---
+
+## Stack technique
+
+- Laravel
+- PHP (Programmation orientée objet)
+- Blade
+- SQLite
+- Migrations Laravel
+- Architecture MVC
+- Design responsive mobile-first
+
+---
+
+## Compétences mises en pratique
+
+- Création et gestion des routes
+- Développement de contrôleurs
+- Utilisation des modèles et de l’ORM Eloquent
+- Conception et migration de la base de données
+- Implémentation des opérations CRUD
+- Validation des formulaires
+- Utilisation des directives et composants Blade
+- Organisation propre du projet selon le pattern MVC
+
+---
+
+## Aperçu
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/6a4c522a-9cd0-47b3-a1cf-98cd7ad88e61" />
 
@@ -47,47 +80,18 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ---
 
+## Objectif pédagogique
 
+Ce projet s’inscrit dans mon parcours d’apprentissage avancé du développement web.  
+Il démontre ma capacité à :
 
+- Structurer une application Laravel complète
+- Concevoir et gérer une base de données relationnelle
+- Appliquer les principes de la programmation orientée objet
+- Développer une application web responsive orientée utilisateur
 
+---
 
+## Licence
 
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Projet réalisé à des fins pédagogiques.
