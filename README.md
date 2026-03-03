@@ -11,7 +11,7 @@ La plateforme permet aux utilisateurs de consulter des annonces, proposer leurs 
 
 Ce projet a été entièrement développé avec Laravel et met l’accent sur la programmation orientée objet, l’architecture MVC et la gestion de base de données via les migrations.
 
----
+
 
 ## À propos du projet
 
@@ -27,7 +27,7 @@ Replay est :
 
 L’objectif principal de ce projet était de mettre en pratique le développement d’une application complète avec Laravel en respectant les bonnes pratiques professionnelles.
 
----
+
 
 ## Stack technique
 
@@ -39,7 +39,7 @@ L’objectif principal de ce projet était de mettre en pratique le développeme
 - Architecture MVC
 - Design responsive mobile-first
 
----
+
 
 ## Compétences mises en pratique
 
@@ -52,46 +52,31 @@ L’objectif principal de ce projet était de mettre en pratique le développeme
 - Utilisation des directives et composants Blade
 - Organisation propre du projet selon le pattern MVC
 
----
+
 
 ## Aperçu
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/6a4c522a-9cd0-47b3-a1cf-98cd7ad88e61" />
 
----
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/f730f7d5-4083-41ac-9d2d-30b1e79a8713" />
 
----
+
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/ff1a688c-5f88-4994-b007-f67ed18878ff" />
 
----
+
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/77264678-b9f6-414a-a875-cac445d05f92" />
 
----
+
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/35aa1f7f-740f-49e6-beb0-cab15d79b13d" />
 
----
 
 <img width="1850" height="914" alt="image" src="https://github.com/user-attachments/assets/34d5add3-e2f1-499c-9c52-da342e1a9024" />
 
----
 
-## Objectif pédagogique
 
-Ce projet s’inscrit dans mon parcours d’apprentissage avancé du développement web.  
-Il démontre ma capacité à :
 
-- Structurer une application Laravel complète
-- Concevoir et gérer une base de données relationnelle
-- Appliquer les principes de la programmation orientée objet
-- Développer une application web responsive orientée utilisateur
 
----
-
-## Licence
-
-Projet réalisé à des fins pédagogiques.
